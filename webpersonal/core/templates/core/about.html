@@ -1,0 +1,20 @@
+{% extends 'core/base.html' %}
+{% block title %}Sobre mi{% endblock %}
+
+{% block headers %}
+<h1>Sobre mi</h1>
+<span class="subheading">Biografia</span>
+{% endblock %}
+{% block background %}{% load static %} {% static 'core/img/about-bg.jpg' %}{% endblock %}
+{% block content %}
+ <div class='row project'>
+  <div class="col-lg-3 col-md-4 offset-lg-1">
+    <img class="img-fluid avatar" src="{% static 'core/img/brune.jpg' %}" alt="">
+  </div>
+  <div class="col-lg-7 col-md-8">
+    <h2 class="section-heading">Joan</h2>   
+    <p>Nascut a Reus al any 1996. Actualment cursant l'últim any d'Enginyeria Informàtica. En un futur anire a Barcelona a la Upc ha fer el màster de seguretat informàtica.</p>
+    <p>M'encanta apendre noves tecnologies i per això estic aprenent Django. De fet aquesta pàgina web està feta amb Django.</p>
+  </div>
+  </div>
+{% endblock %}
