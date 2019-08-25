@@ -18,6 +18,8 @@ from django.urls import path
 from core import views as core_views
 from portafolio import views as portafolio_views
 from django.conf import settings
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('',core_views.home,name='home'),
@@ -25,7 +27,7 @@ urlpatterns = [
     path('portafolio/',portafolio_views.portafolio,name='portafolio'),
     path('contact/',core_views.contact,name='contact'),
     path('admin/', admin.site.urls),
-]
+]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 
 if settings.DEBUG:
